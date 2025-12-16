@@ -1,0 +1,11 @@
+%%{init: {'flowchart': {'curve': 'linear'}, 'theme': 'base', 'primaryColor':'#f0f0f0'}}%%
+graph LR
+    A["👤 Pelanggan<br/>Melihat Promosi"] -->|Chat<br/>WA/IG| B["👨‍💼 Admin<br/>Berikan Format"]
+    B -->|Isi Data<br/>Pesanan| C["📝 Pelanggan<br/>Kirim Data"]
+    C -->|Terima<br/>Data| D["🧮 Admin<br/>Hitung Harga"]
+    D -->|Konfirmasi| E["💳 Pelanggan<br/>Transfer"]
+    E -->|Bukti<br/>Transfer| F{✅ Admin<br/>Verifikasi}
+    F -->|Valid| G["📋 Catat<br/>Pesanan"]
+    F -->|Tidak Valid| H["❌ Minta<br/>Konfirmasi"]
+    H --> E
+    G -->|Data| I["🎨 Desainer<br/>Proses"]
