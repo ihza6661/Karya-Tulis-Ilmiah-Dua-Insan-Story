@@ -1,8 +1,7 @@
-PERANCANGAN SISTEM PEMESANAN DESAIN UNDANGAN BERBASIS WEB PADA 
-TOKO DUA INSAN STORY
-
+PERANCANGAN SISTEM PEMESANAN DESAIN UNDANGAN BERBASIS WEB PADA TOKO DUA INSAN STORY
 
 ## BAB 1
+
 ## PENDAHULUAN
 
 ### 1.1 Latar Belakang
@@ -11,17 +10,19 @@ Di era digital saat ini, perkembangan teknologi informasi telah membawa perubaha
 
 Toko Dua Insan Story merupakan usaha lokal yang bergerak di bidang pembuatan desain undangan cetak untuk berbagai acara seperti pernikahan, tunangan, ulang tahun, dan acara resmi lainnya. Saat ini, proses pemesanan desain undangan masih dilakukan secara manual melalui pesan langsung di media sosial. Cara tersebut seringkali menimbulkan beberapa kendala, seperti risiko kesalahpahaman informasi, keterbatasan dalam melakukan penyesuaian desain secara interaktif, kesulitan pelanggan dalam melacak status pemesanan, serta tidak adanya sistem yang terstruktur untuk proses persetujuan desain (design proof approval).
 
-Melihat permasalahan tersebut, diperlukan sebuah sistem pemesanan desain undangan online yang mampu memberikan pengalaman pengguna (user experience) yang lebih baik, mudah diakses oleh berbagai kalangan, serta mempercepat proses komunikasi antara pelanggan dan penyedia jasa. Pengalaman pengguna yang baik terbukti menjadi faktor kunci dalam kesuksesan aplikasi web modern (Norman, 2013). Sistem ini diharapkan dapat menyediakan berbagai fitur yang mendukung proses pemesanan hingga pengiriman, antara lain:
+Berdasarkan permasalahan yang telah diuraikan sebelumnya, diperlukan sebuah sistem pemesanan desain undangan berbasis online yang mampu meningkatkan kualitas pengalaman pengguna (user experience), mudah diakses oleh berbagai kalangan, serta mampu mempercepat dan mengefisienkan proses komunikasi antara pelanggan dan penyedia jasa. Pengalaman pengguna yang baik terbukti menjadi salah satu faktor kunci dalam keberhasilan aplikasi web modern (Norman, 2013).
 
-1. **Katalog produk undangan** dengan filter berdasarkan kategori, harga, dan popularitas, memudahkan pelanggan untuk memilih desain yang sesuai dengan tema acara mereka
-2. **Formulir pemesanan online** dengan pengisian data acara secara terstruktur, mengurangi risiko kesalahan informasi yang sering terjadi pada komunikasi manual
-3. **Kalkulator biaya otomatis** yang menghitung harga berdasarkan jumlah pesanan, pilihan kertas, dan tambahan aksesoris, memberikan transparansi harga kepada pelanggan
-4. **Sistem design proof approval** yang memungkinkan admin mengunggah pratinjau desain dan pelanggan dapat memberikan persetujuan, meminta revisi, atau menolak desain secara sistematis dengan tracking history revisi
-5. **Integrasi pembayaran online** melalui Midtrans dengan opsi down payment (DP) minimum 30% atau pembayaran penuh, memberikan fleksibilitas kepada pelanggan
-6. **Perhitungan ongkos kirim otomatis** melalui RajaOngkir API dengan pilihan ekspedisi (JNE, POS, TIKI) dan berbagai layanan pengiriman
-7. **Sistem notifikasi email** untuk setiap tahap pemesanan (konfirmasi order, konfirmasi pembayaran, upload design proof, persetujuan desain, pengiriman)
-8. **Tracking order** dengan status real-time dari pemesanan hingga pengiriman barang ke tangan pelanggan
-9. **Sistem review dan rating** untuk feedback pelanggan terhadap produk dan layanan, meningkatkan kredibilitas toko
+Sistem yang dirancang diharapkan dapat menyediakan fitur-fitur yang mendukung seluruh proses pemesanan, mulai dari pemilihan produk hingga pengiriman kepada pelanggan. Adapun fitur-fitur utama yang diusulkan dalam sistem pemesanan desain undangan online ini antara lain sebagai berikut:
+
+1. Katalog produk undangan, yang dilengkapi dengan fitur penyaringan (filter)  berdasarkan kategori, rentang harga, dan tingkat popularitas, sehingga  memudahkan pelanggan dalam memilih desain undangan yang sesuai dengan  tema acara yang diinginkan.
+2. Formulir pemesanan online, yang dirancang dengan pengisian data acara  secara terstruktur, guna meminimalkan risiko kesalahan informasi yang sering  terjadi pada proses pemesanan secara manual.
+3. Kalkulator biaya otomatis, yang berfungsi untuk menghitung total harga  pemesanan berdasarkan jumlah undangan, jenis kertas, serta tambahan  aksesoris, sehingga dapat memberikan transparansi harga kepada pelanggan.
+4. Sistem persetujuan desain (design proof approval), yang memungkinkan  admin untuk mengunggah pratinjau desain, serta memberikan fasilitas bagi  pelanggan untuk memberikan persetujuan, mengajukan revisi, atau menolak  desain secara sistematis, disertai dengan pencatatan riwayat revisi (revision  tracking).
+5. Integrasi sistem pembayaran online, melalui layanan Midtrans, yang  menyediakan opsi pembayaran uang muka (down payment) minimal sebesar 30% atau pembayaran penuh, sehingga memberikan fleksibilitas bagi  pelanggan dalam melakukan transaksi.
+6. Perhitungan ongkos kirim otomatis, yang terintegrasi dengan API RajaOngkir,  dengan pilihan ekspedisi seperti JNE, POS, dan TIKI, serta berbagai jenis  layanan pengiriman.
+7. Sistem notifikasi berbasis email, yang memberikan informasi kepada  pelanggan pada setiap tahapan pemesanan, meliputi konfirmasi pemesanan,  konfirmasi pembayaran, pengunggahan pratinjau desain, persetujuan desain,  hingga proses pengiriman.
+8. Fitur pelacakan pesanan (order tracking), yang memungkinkan pelanggan  untuk memantau status pemesanan secara real-time, mulai dari proses  pemesanan hingga barang diterima oleh pelanggan.
+9. Sistem ulasan dan penilaian (review and rating), yang berfungsi sebagai  sarana umpan balik pelanggan terhadap produk dan layanan, serta dapat  meningkatkan tingkat kepercayaan dan kredibilitas toko.
 
 Laravel merupakan framework berbasis PHP yang dirancang untuk mempermudah proses pengembangan aplikasi web dengan menerapkan pola arsitektur Model-View-Controller (MVC) (Valenty dkk., 2024). Framework ini menyediakan berbagai fitur bawaan seperti sistem routing, authentication, template engine (Blade), serta Object Relational Mapping (ORM) melalui Eloquent untuk mempermudah interaksi dengan basis data. Penerapan Laravel memberikan sejumlah keuntungan, antara lain peningkatan efisiensi waktu pengembangan, konsistensi kode, serta keamanan yang lebih baik dalam mengelola proses autentikasi dan transaksi data (Stauffer, 2019). Dengan sintaks yang bersih dan struktur yang terorganisir, Laravel banyak digunakan dalam pengembangan sistem informasi modern karena dapat meminimalisasi kesalahan logika dan mempercepat proses implementasi.
 
@@ -35,78 +36,77 @@ Untuk mendukung pengiriman undangan cetak kepada pelanggan di berbagai daerah, s
 
 Salah satu fitur unggulan dalam sistem ini adalah **sistem design proof approval** yang terstruktur. Workflow approval yang sistematis dalam proses desain terbukti efektif mengurangi kesalahan produksi dan meningkatkan kepuasan klien (Nielsen, 2020; Garrett, 2021). Setelah pelanggan melakukan pemesanan dan pembayaran, admin atau desainer akan membuat desain undangan sesuai dengan data yang diberikan. Desain tersebut kemudian diunggah ke sistem sebagai design proof (bukti desain) yang dapat diakses oleh pelanggan melalui dashboard mereka. Pelanggan memiliki tiga opsi: menyetujui desain (approve), meminta revisi dengan memberikan catatan spesifik, atau menolak desain jika tidak sesuai dengan ekspektasi. Setiap interaksi tercatat dalam sistem dengan timestamp, memudahkan tracking history revisi dan komunikasi antara pelanggan dengan penyedia jasa (Sommerville, 2021). Proses ini memastikan bahwa tidak ada kesalahpahaman dalam desain akhir, dan produksi hanya dimulai setelah pelanggan memberikan persetujuan final. Sistem notifikasi email akan dikirim secara otomatis pada setiap tahap approval untuk menjaga transparansi komunikasi.
 
-Dengan adanya sistem pemesanan desain undangan secara online ini, Toko Dua Insan Story diharapkan dapat meningkatkan efisiensi layanan, memperluas jangkauan pelanggan, serta mempermudah proses pengelolaan pemesanan. Pendekatan ini diharapkan mampu mendukung toko dalam memberikan layanan yang lebih profesional, responsif, serta sesuai dengan kebutuhan dan preferensi pelanggan.
+Dengan adanya sistem pemesanan desain undangan online ini, diharapkan  dapat meningkatkan efisiensi operasional, mengurangi kesalahan komunikasi, serta memberikan pengalaman pengguna yang lebih baik bagi pelanggan maupun pengelola usaha.
 
-### 1.2 Perumusan Masalah
+### 1.2 Rumusan Masalah
 
-Berdasarkan uraian permasalahan pada latar belakang, perumusan masalah dalam penelitian ini adalah:
+ Berdasarkan uraian permasalahan pada latar belakang, perumusan masalah dalam penelitian ini adalah:
+"Bagaimana merancang dan membangun sistem pemesanan desain undangan cetak berbasis web pada Toko Dua Insan Story yang mampu menggantikan proses pemesanan manual, meningkatkan efisiensi komunikasi antara pelanggan dan penyedia jasa, meminimalkan kesalahan informasi pemesanan, serta menyediakan fitur katalog desain, sistem persetujuan bukti desain (design proof approval) dengan pelacakan revisi, perhitungan ongkos kirim otomatis, dan integrasi pembayaran online guna mendukung layanan yang cepat, transparan, dan profesional?"
 
-"Bagaimana merancang dan membangun sebuah sistem pemesanan desain undangan cetak berbasis web yang fungsional untuk menggantikan proses pemesanan manual pada Toko Dua Insan Story, sehingga dapat meningkatkan efisiensi komunikasi antara pelanggan dan penyedia jasa, meminimalisasi kesalahan informasi pemesanan, serta menyediakan fitur interaktif seperti katalog desain, sistem design proof approval dengan tracking revisi, perhitungan ongkos kirim otomatis, dan integrasi pembayaran online untuk mendukung pelayanan yang cepat, transparan, dan profesional?"
+### 1.3  Batasan CAPSTONE PROJECT
 
-### 1.3 Batasan Penelitian
+ Penelitian ini dibatasi agar tetap fokus pada tujuan yang ingin dicapai serta dapat diselesaikan sesuai dengan ruang lingkup Capstone Project. Ruang lingkup penelitian meliputi perancangan dan pembangunan sistem pemesanan desain undangan cetak berbasis web dengan menggunakan Laravel 12 sebagai backend, React.js dengan Vite untuk antarmuka pelanggan (customer frontend), Next.js untuk dashboard administrator, serta MySQL sebagai basis data.
+ Fitur utama yang dikembangkan dalam sistem ini meliputi katalog desain undangan cetak, formulir pemesanan online dengan opsi kustomisasi, pengisian data acara oleh pelanggan, sistem persetujuan bukti desain (design proof approval) dengan alur persetujuan, revisi, dan penolakan, notifikasi status pesanan melalui email, perhitungan ongkos kirim otomatis melalui integrasi RajaOngkir API, serta integrasi pembayaran online menggunakan Midtrans dengan opsi pembayaran uang muka (down payment) dan pembayaran penuh (full payment).
+ Adapun beberapa aspek yang tidak termasuk dalam cakupan penelitian ini adalah sebagai berikut:
 
-Penelitian ini dibatasi agar tetap fokus pada tujuan yang ingin dicapai. Ruang lingkup penelitian meliputi perancangan sistem pemesanan desain undangan cetak berbasis web menggunakan Laravel 12 (backend), React.js dengan Vite untuk situs pelanggan (frontend customer), Next.js untuk dashboard administrator, dan basis data MySQL. Fitur utama yang dikembangkan mencakup katalog desain undangan cetak, formulir pemesanan online dengan customization options, pengisian data acara oleh pelanggan, sistem design proof approval dengan workflow persetujuan/revisi/penolakan, notifikasi status pesanan melalui email, perhitungan ongkos kirim otomatis via RajaOngkir API, serta integrasi pembayaran online melalui Midtrans dengan opsi down payment (DP) dan pembayaran penuh.
+1. Undangan digital berbasis web (web-based invitation templates), karena fitur tersebut direncanakan sebagai pengembangan lanjutan di masa mendatang.
+2. Manajemen stok bahan baku fisik percetakan, seperti kertas, tinta, amplop, dan aksesoris lainnya.
+3. Integrasi langsung dengan mesin cetak atau printer industri.
+4. Modul akuntansi lanjutan, seperti general ledger, arus kas (cash flow), laporan laba rugi, dan pelaporan pajak.
+5. Fitur multi-user dengan pemisahan peran secara rinci, seperti admin, desainer, operator cetak, kurir, dan gudang.
+6. Sistem inventory management untuk pelacakan bahan baku dan produk jadi (finished goods).
+7. Integrasi dengan sistem Enterprise Resource Planning (ERP) atau perangkat lunak akuntansi pihak ketiga, seperti Accurate, Zahir, atau SAP.
+8. Fitur Customer Relationship Management (CRM) lanjutan, seperti otomatisasi pemasaran email (email marketing automation) dan segmentasi pelanggan.
+9. Sistem loyalty program atau keanggotaan (membership) dengan skema poin atau reward.
+Dengan adanya batasan tersebut, penelitian ini diharapkan dapat menghasilkan sistem yang terfokus, terukur, dan relevan dengan kebutuhan utama Toko Dua Insan Story, tanpa meluas ke aspek-aspek di luar tujuan utama penelitian.
 
-Aspek lain yang tidak termasuk dalam cakupan penelitian antara lain:
+### 1.4  Tujuan CAPSTONE PROJECT
 
-- **Undangan digital berbasis web** (web-based invitation templates) - Fitur ini tidak termasuk dalam scope penelitian dan akan menjadi pengembangan terpisah di masa mendatang
-- Manajemen stok bahan baku fisik untuk percetakan (kertas, tinta, amplop, ribbon)
-- Integrasi langsung dengan mesin cetak atau printer industri
-- Modul akuntansi lanjutan seperti general ledger, cash flow, laporan laba rugi, dan laporan pajak
-- Fitur multi-user dengan pemisahan peran detail (admin–desainer–operator cetak–kurir–warehouse)
-- Sistem inventory management untuk tracking bahan baku dan finished goods
-- Integrasi dengan sistem ERP atau accounting software pihak ketiga seperti Accurate, Zahir, atau SAP
-- Fitur customer relationship management (CRM) lanjutan seperti email marketing automation atau customer segmentation
-- Sistem loyalty program atau membership dengan point reward
+ Tujuan dari penelitian ini adalah untuk merancang dan membangun sistem pemesanan desain undangan cetak berbasis web pada Toko Dua Insan Story sebagai pengganti proses pemesanan manual. Sistem ini dikembangkan menggunakan Laravel dan React.js/Next.js dengan basis data MySQL, dengan harapan dapat meningkatkan efisiensi proses pemesanan serta komunikasi antara pelanggan dan penyedia jasa, mengurangi risiko kesalahan informasi, dan mempercepat proses konfirmasi pesanan.
+Secara khusus, tujuan dari pengembangan sistem ini adalah sebagai berikut:
 
-### 1.4 Tujuan Penelitian
+1. Mengembangkan sistem pemesanan undangan cetak berbasis web yang  memungkinkan pelanggan melakukan pemesanan secara mandiri melalui  antarmuka yang interaktif dan responsif.
+2. Menyediakan fitur katalog desain undangan yang memudahkan pelanggan  dalam memilih template sesuai dengan kebutuhan dan tema acara.
+3. Mengimplementasikan formulir pemesanan dengan opsi kustomisasi, meliputi  pengisian data acara, pilihan kertas, ukuran undangan, serta tambahan  aksesoris.
+4. Mengembangkan sistem persetujuan bukti desain (design proof approval)  yang terstruktur untuk memfasilitasi proses persetujuan, revisi, dan penolakan  desain, serta mendokumentasikan seluruh riwayat revisi secara sistematis.
+5. Mengotomatisasi perhitungan biaya pengiriman berdasarkan lokasi tujuan  melalui integrasi RajaOngkir API.
+6. Mengintegrasikan sistem pembayaran online yang aman dan efisien melalui  Midtrans, dengan opsi pembayaran uang muka (down payment) dan  pembayaran penuh.
+7. Memastikan bahwa proses produksi undangan hanya dimulai setelah  pelanggan memberikan persetujuan akhir terhadap desain yang diajukan.
+ Dengan tercapainya tujuan-tujuan tersebut, diharapkan sistem yang dikembangkan dapat mendukung peningkatan kualitas layanan, profesionalisme, serta kepuasan pelanggan pada Toko Dua Insan Story.
 
-Tujuan penelitian ini adalah merancang dan membangun sistem pemesanan desain undangan cetak berbasis web menggunakan Laravel dan React.js/Next.js dengan basis data MySQL pada Toko Dua Insan Story, sebagai pengganti proses pemesanan manual. Penelitian ini bertujuan meningkatkan efisiensi proses pemesanan dan komunikasi antara pelanggan dan penyedia jasa, mengurangi risiko kesalahan informasi, serta mempercepat proses konfirmasi pesanan.
+### 1.5  Manfaat CAPSTONE PROJECT
 
-Selain itu, sistem ini ditujukan untuk menyediakan antarmuka yang interaktif dan responsif sehingga pelanggan dapat memilih template desain, menyesuaikan data acara dengan berbagai opsi customization (pilihan kertas, ukuran, aksesoris), dan melihat pratinjau desain melalui sistem design proof approval. Sistem ini juga bertujuan untuk mengotomatisasi perhitungan biaya pengiriman berdasarkan lokasi tujuan melalui integrasi RajaOngkir API, serta mempermudah proses transaksi pembayaran secara aman dan efisien melalui integrasi payment gateway Midtrans dengan opsi down payment (DP) dan pembayaran penuh.
+a. Manfaat bagi Penulis
+Capstone Project ini memberikan kesempatan bagi penulis untuk merancang dan membangun aplikasi web secara full-stack, mulai dari perancangan backend hingga implementasi frontend. Melalui penelitian ini, penulis memperoleh pengalaman dalam penerapan arsitektur Model–View–Controller (MVC) menggunakan framework Laravel, pengelolaan basis data MySQL, serta penerapan konsep komponen dan state management pada React.js dan Next.js. Selain itu, penulis juga mendapatkan pengalaman praktis dalam mengintegrasikan sistem dengan layanan pihak ketiga, seperti payment gateway Midtrans dan layanan perhitungan ongkos kirim melalui RajaOngkir API. Hasil dari Capstone Project ini diharapkan dapat menjadi portofolio yang bernilai serta menjadi referensi bagi penulis dalam pengembangan aplikasi web modern, khususnya pada sistem pemesanan dan e-commerce berbasis web.
+b.  Manfaat bagi Pengguna
+Bagi Toko Dua Insan Story, penelitian ini memberikan manfaat berupa peningkatan efisiensi dan profesionalitas dalam proses pemesanan desain undangan cetak. Sistem yang dikembangkan memungkinkan pengelolaan pesanan secara lebih terstruktur, mempercepat proses konfirmasi, serta mengurangi ketergantungan pada komunikasi manual yang berpotensi menimbulkan kesalahan informasi.
+Selain itu, pelanggan memperoleh kemudahan dalam melakukan pemesanan melalui katalog desain yang lengkap, sistem persetujuan bukti desain (design proof approval) dengan pelacakan riwayat revisi yang jelas, perhitungan ongkos kirim yang transparan, serta notifikasi otomatis pada setiap tahap pemesanan. Dengan adanya sistem design proof approval yang terstruktur, risiko kesalahan produksi dapat diminimalkan karena pelanggan memiliki kendali penuh terhadap persetujuan desain akhir sebelum memasuki tahap produksi. Secara keseluruhan, sistem ini diharapkan dapat membantu Toko Dua Insan Story dalam memperluas jangkauan pemasaran secara online, meningkatkan kepuasan pelanggan, serta menyediakan data pemesanan yang dapat dimanfaatkan sebagai dasar dalam pengambilan keputusan bisnis.
 
-Secara khusus, sistem design proof approval yang dikembangkan bertujuan untuk menghilangkan kesalahpahaman dalam proses persetujuan desain, memberikan dokumentasi lengkap terhadap setiap revisi yang diminta pelanggan, serta memastikan bahwa produksi hanya dimulai setelah mendapat persetujuan final dari pelanggan.
+### 1.6  Metodologi Perancangan Solusi
 
-### 1.5 Manfaat Penelitian
-
-#### a. Manfaat bagi Penulis
-
-Penelitian ini memberikan kesempatan bagi penulis untuk merancang dan membangun aplikasi web secara full-stack, mulai dari perancangan backend hingga implementasi frontend. Penulis memperoleh pengalaman dalam penerapan arsitektur MVC pada Laravel, pengelolaan basis data MySQL, serta konsep komponen dan state management pada React.js dan Next.js. Penulis juga mendapatkan pengalaman praktis dalam integrasi dengan layanan pihak ketiga seperti payment gateway (Midtrans) dan API shipping cost calculator (RajaOngkir). Hasil penelitian diharapkan menjadi portofolio yang bernilai dalam pengembangan aplikasi web modern dan dapat menjadi referensi untuk pengembangan sistem e-commerce sejenis.
-
-#### b. Manfaat bagi Pengguna
-
-Bagi Toko Dua Insan Story, manfaat utama penelitian ini adalah peningkatan efisiensi dan profesionalitas dalam proses pemesanan desain undangan cetak. Sistem yang dikembangkan memudahkan pengelolaan pesanan secara terstruktur, mempercepat proses konfirmasi, serta meningkatkan kepuasan pelanggan melalui katalog desain yang lengkap, sistem design proof approval dengan tracking revisi yang jelas, perhitungan ongkos kirim yang transparan, dan notifikasi otomatis di setiap tahap pemesanan. Sistem juga membantu memperluas jangkauan pemasaran online dan memberikan data analytics yang berguna untuk pengambilan keputusan bisnis. Dengan sistem design proof approval yang terstruktur, kesalahan produksi dapat diminimalisir dan kepuasan pelanggan dapat ditingkatkan karena mereka memiliki kontrol penuh terhadap desain final sebelum masuk tahap produksi.
-
-### 1.6 Metodologi Perancangan Solusi
-
-Metode perancangan perangkat lunak yang digunakan adalah Extreme Programming (XP). XP menekankan kolaborasi erat antara pengembang dan pengguna serta iterasi cepat dalam proses pengembangan (Beck & Andres, 2004). Kegiatan utama meliputi perencanaan, perancangan, pengkodean, dan pengujian.
-
-#### a. Planning (Perencanaan)
-
+ Metode perancangan perangkat lunak yang digunakan adalah Extreme Programming (XP). XP menekankan kolaborasi erat antara pengembang dan pengguna serta iterasi cepat dalam proses pengembangan (Beck & Andres, 2004). Kegiatan utama meliputi perencanaan, perancangan, pengkodean, dan pengujian.
+a. Planning (Perencanaan)
 Identifikasi masalah dilakukan melalui observasi dan wawancara dengan pemilik. Hasilnya berupa daftar kebutuhan fungsional dan non-fungsional serta analisis alur pemesanan manual yang kemudian dijadikan dasar rancangan solusi berbasis web. Pada tahap ini juga dilakukan analisis terhadap proses bisnis yang berjalan, identifikasi pain points dalam sistem manual, serta penentuan prioritas fitur yang akan dikembangkan. User stories dibuat untuk setiap fitur utama, seperti "Sebagai pelanggan, saya ingin melihat pratinjau desain undangan saya agar dapat memberikan persetujuan atau meminta revisi".
-
-#### b. Design (Perancangan)
-
+b. Design (Perancangan)  
 Hasil analisis kebutuhan diterjemahkan ke dalam model dan rancangan sistem, termasuk arsitektur sistem, perancangan antarmuka menggunakan React.js dan Next.js, dan perancangan basis data menggunakan ERD. Pemodelan proses bisnis dan diagram UML juga disusun untuk memastikan keterpaduan komponen (Pressman & Maxim, 2020). Pada tahap ini dirancang pula struktur database dengan 55 tabel yang mencakup entitas users, products, orders, design proofs, payments, shipping, dan lain-lain. Perancangan API endpoints juga dilakukan untuk memastikan komunikasi yang efisien antara backend dan frontend.
-
-#### c. Coding (Pengkodean)
-
+c. Coding (Pengkodean)
 Implementasi dilakukan dengan menerjemahkan rancangan ke dalam kode menggunakan Laravel 12 (backend API), React.js dengan Vite untuk situs pelanggan, dan Next.js 15 untuk dashboard administrator. MySQL digunakan sebagai basis data untuk menyimpan data pemesanan, informasi pelanggan, design proofs, dan informasi produk. Database relasional seperti MySQL terbukti efektif untuk mengelola data transaksional dalam sistem e-commerce (Elmasri & Navathe, 2016). Pengkodean dilakukan secara iteratif dengan fokus pada satu fitur dalam satu waktu (feature-based development). Setiap fitur yang selesai di-commit ke version control system (Git) untuk memudahkan tracking perubahan dan kolaborasi.
-
-#### d. Testing (Pengujian)
-
+d. Testing (Pengujian)
 Setelah pengkodean, dilakukan pengujian fungsional untuk memverifikasi kesesuaian sistem terhadap kebutuhan pengguna, termasuk pengujian fitur pemesanan, kustomisasi produk, sistem design proof approval (approve/revision/reject), notifikasi email, perhitungan ongkos kirim via RajaOngkir, dan integrasi pembayaran online melalui Midtrans. Pengujian dilakukan secara manual (manual testing) maupun otomatis (automated testing) menggunakan PHPUnit untuk backend dan Jest untuk frontend. User acceptance testing (UAT) juga dilakukan dengan melibatkan pemilik toko untuk memastikan sistem sesuai dengan ekspektasi dan kebutuhan bisnis.
 
-### 1.7 Sistematika Penulisan
-
+1.7  Sistematika Penulisan
 Berikut gambaran singkat sistematika penulisan laporan:
-
-- **BAB 1 PENDAHULUAN**: Gambaran umum penelitian, meliputi latar belakang, perumusan masalah, batasan penelitian, tujuan dan manfaat, metodologi, dan sistematika penulisan.
-- **BAB 2 GAMBARAN UMUM TOKO DUA INSAN STORY**: Profil objek penelitian, layanan, proses bisnis, dan struktur organisasi.
-- **BAB 3 PERANCANGAN SOLUSI**: Analisis kebutuhan, desain sistem (UML, ERD), perancangan antarmuka, dan langkah implementasi.
-- **BAB 4 PENUTUP**: Kesimpulan dan saran untuk pengembangan selanjutnya.
+BAB 1 PENDAHULUAN
+Gambaran umum penelitian, meliputi latar belakang, perumusan masalah, batasan penelitian, tujuan dan manfaat, metodologi, dan sistematika penulisan.
+BAB 2 TEMPAT CAPSTONE PROJECT  
+Profil objek penelitian, layanan, proses bisnis, dan struktur organisasi.
+BAB 3 PERANCANGAN SOLUSI
+Analisis kebutuhan, desain sistem (UML, ERD), perancangan antarmuka, dan langkah implementasi.
+BAB 4 PENUTUP
+Kesimpulan dan saran untuk pengembangan selanjutnya.
 
 ## BAB 2
+
 ## GAMBARAN UMUM TOKO DUA INSAN STORY
 
 ### 2.1 Profil Toko Dua Insan Story
@@ -118,11 +118,13 @@ Produk utama yang ditawarkan adalah **Undangan Cetak**, yaitu undangan fisik ber
 Toko Dua Insan Story menyediakan berbagai varian produk undangan cetak yang dapat disesuaikan dengan kebutuhan dan budget pelanggan, antara lain:
 
 **Pilihan Ukuran:**
+
 - **Standar** (10 x 15 cm) - Ukuran paling populer dan ekonomis
 - **Premium** (15 x 20 cm) - Ukuran lebih besar dengan kesan lebih mewah
 - **Eksklusif** (custom size) - Ukuran khusus sesuai permintaan pelanggan
 
 **Jenis Kertas:**
+
 - **Art Paper** (150-260 gsm) - Kertas standar dengan permukaan halus dan hasil cetak tajam
 - **Ivory** (210-310 gsm) - Kertas premium dengan tekstur sedikit kasar dan kesan natural
 - **Linen** (200-300 gsm) - Kertas dengan motif garis-garis halus memberikan kesan elegan
@@ -130,6 +132,7 @@ Toko Dua Insan Story menyediakan berbagai varian produk undangan cetak yang dapa
 - **Art Carton** (190-260 gsm) - Kertas tebal dan kokoh cocok untuk undangan lipat
 
 **Material dan Aksesoris Tambahan:**
+
 - **Amplop** - Amplop custom dengan berbagai warna dan bahan (kertas, kain, atau plastik bening)
 - **Stiker Segel** - Stiker custom dengan nama atau inisial mempelai untuk menutup amplop
 - **Pita/Ribbon** - Pita satin atau organza berbagai warna sebagai hiasan
@@ -138,6 +141,7 @@ Toko Dua Insan Story menyediakan berbagai varian produk undangan cetak yang dapa
 - **Kartu Informasi Tambahan** - Info akomodasi, peta lokasi, atau protokol kesehatan
 
 **Pilihan Finishing:**
+
 - **Laminasi Glossy** - Permukaan mengkilap yang memberikan warna lebih vibrant
 - **Laminasi Doff** - Permukaan tidak mengkilap dengan kesan lebih elegan dan premium
 - **Hot Print** - Cetak menggunakan teknik hot stamping dengan foil emas atau perak
@@ -222,6 +226,7 @@ Total harga final (harga produk + ongkos kirim) kemudian disampaikan kepada pela
 Pelanggan melakukan pembayaran melalui transfer bank ke rekening pemilik dan mengirimkan bukti transfer berupa foto atau screenshot ke admin via chat. Admin kemudian memverifikasi pembayaran secara manual dengan membuka aplikasi mobile banking, memeriksa mutasi rekening, dan mencocokkan nominal pembayaran dengan pesanan. Proses verifikasi bisa memakan waktu beberapa jam hingga satu hari kerja tergantung kesibukan admin.
 
 Setelah pembayaran dinyatakan valid, admin mencatat pesanan tersebut ke dalam buku pesanan manual (buku tulis fisik) atau catatan digital sederhana (misalnya aplikasi Notes di smartphone atau Google Sheets) dengan informasi:
+
 - Nomor pesanan (manual numbering, misal: INV-001)
 - Nama pelanggan
 - Nomor HP pelanggan
@@ -240,12 +245,14 @@ Desainer menerima data pesanan dari admin dalam bentuk pesan teks atau dokumen, 
 Setelah desain selesai, desainer mengirimkan hasil desain kepada admin dalam bentuk file gambar (JPEG atau PNG) dengan watermark "DRAFT" atau "PROOF" melalui aplikasi pesan instan atau email. Admin kemudian meneruskan file desain kepada pelanggan untuk dilakukan proses approval (persetujuan).
 
 Pelanggan meninjau desain melalui file gambar yang dikirim via WhatsApp atau email dan memberikan feedback apakah desain sudah sesuai atau memerlukan revisi. Feedback disampaikan melalui pesan teks yang seringkali tidak spesifik, misalnya:
+
 - "Warna kurang cocok"
 - "Font-nya diganti yang lebih elegan"
 - "Nama ayah saya salah"
 - "Tanggalnya harusnya 15 bukan 16"
 
 Proses komunikasi revisi ini dilakukan berulang kali melalui pesan chat tanpa ada sistem tracking yang jelas. Masalah yang sering terjadi:
+
 - **Tidak ada history revisi**: Tidak jelas versi desain yang mana yang sudah di-review atau belum
 - **Pesan terlewat**: Chat bisa tertumpuk dengan percakapan lain, menyebabkan revisi terlewat
 - **Ambiguitas feedback**: Komentar pelanggan tidak spesifik, desainer harus bertanya ulang berkali-kali
@@ -279,6 +286,7 @@ Pada akhir periode (bulanan), pemilik atau admin melakukan rekapitulasi manual d
 Proses rekapitulasi ini sangat memakan waktu (bisa 2-4 jam) dan rentan terhadap kesalahan perhitungan karena dilakukan secara manual. Jika ada pesanan yang tidak tercatat di buku atau transaksi yang terlewat, data laporan menjadi tidak akurat.
 
 Pemilik kemudian memeriksa laporan tersebut secara visual untuk mengevaluasi kinerja bisnis dan menentukan strategi pemasaran ke depan. Tidak ada sistem otomatis yang memberikan insight atau dashboard statistik untuk mendukung pengambilan keputusan. Misalnya, pemilik tidak bisa dengan mudah mengetahui:
+
 - Produk mana yang paling menguntungkan
 - Bulan mana yang paling ramai pesanan (seasonal trends)
 - Pelanggan mana yang paling sering order (untuk program loyalitas)
