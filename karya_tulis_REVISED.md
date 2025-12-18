@@ -109,6 +109,8 @@ Menurut Pressman dan Maxim (2019:46), metode Extreme Programming (XP) terdiri da
 
 Alur tahapan Extreme Programming (XP) yang digunakan dalam penelitian ini dapat dilihat pada Gambar 1.1.
 
+![Gambar 1.1 - Extreme Programming](images/1.1.png)
+
 Sumber: Pressman dan Maxim (2019)
 Gambar 1.1 Extreme Programming
 
